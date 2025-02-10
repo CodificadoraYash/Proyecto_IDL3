@@ -191,29 +191,10 @@ const renderizarProductos = (productos) => {
         });
     });
 
-    // Agregar eventos a los botones de "Agregar al carrito"
-    document.querySelectorAll(".btn-agregar").forEach(boton => {
-        boton.addEventListener("click", () => {
-            const id = parseInt(boton.dataset.id);
-            const nombre = boton.dataset.nombre;
-            const precio = parseFloat(boton.dataset.precio);
-            const cantidad = parseInt(document.getElementById(`cantidad-${id}`).value);
-
-            agregarAlCarrito(id, nombre, precio, cantidad);
-        });
-    });
+    // Agregar eventos a los botones de "Agregar al carrito
 
     // Agregar eventos a los botones de "Agregar al carrito"
-    document.querySelectorAll(".btn-agregar").forEach(boton => {
-        boton.addEventListener("click", () => {
-            const id = parseInt(boton.dataset.id);
-            const nombre = boton.dataset.nombre;
-            const precio = parseFloat(boton.dataset.precio);
-            const cantidad = parseInt(document.getElementById(`cantidad-${id}`).value); // Obtener cantidad seleccionada
-
-            agregarAlCarrito(id, nombre, precio, cantidad); // Agregar con cantidad específica
-        });
-    });
+ 
 };
 
 
