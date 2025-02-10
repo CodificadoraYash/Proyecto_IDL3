@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos</title>
+    <link rel="stylesheet" href="/static/cliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/logotm.png" alt="Logo de TechMart" class="logo-img">
+        </div>
+        <div id="buscador-container">
+            <input type="text" id="buscador" placeholder="Buscar productos...">
+            <i class="fas fa-search"></i>
+        </div>
+        <div id="acciones-header">
+            <div id="carrito">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="carrito-counter">0</span>
+            </div>
+            <div id="iniciar-sesion">
+                <i class="fas fa-user"></i> <!-- Eliminamos el texto "Iniciar sesión" -->
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Contenedor de imágenes promocionales -->
+        <div id="imagenes-promocionales">
+            <img src="/static/imagen1.png" alt="Imagen 1">
+            <img src="/static/imagen2.jpg" alt="Imagen 2">
+            <img src="/static/imagen3.jpg" alt="Imagen 3">
+            <img src="/static/imagen4.jpg" alt="Imagen 4">
+            
+        </div>
+    
+        <!-- Contenedor de productos -->
+        <div id="productos-container"></div>
+         <!-- Contenedor de imágenes promocionales -->
+         <div id="imagenes-promocionales">
+            <img src="/static/imagen5.jpg" alt="Imagen 1">
+            <img src="/static/imagen6.jpg" alt="Imagen 2">
+            <img src="/static/imagen7.jpg" alt="Imagen 3">
+            <img src="/static/imagen8.jpg" alt="Imagen 4">
+            
+        </div>
+        <div id="productos-container"></div>
+    </main>
+    
+<!-- Modal del Carrito -->
+<div id="modal-carrito" class="modal">
+    <div class="modal-content">
+        <span id="cerrar-modal" class="cerrar">&times;</span>
+        <h2>Carrito de Compras</h2>
+        <div id="productos-modal"></div>
+        <h3>Total: $<span id="total-suma">0.00</span></h3>
+    </div>
+</div>
+
+
+    <!-- Modal para Iniciar Sesión -->
+   <!-- Modal para Iniciar Sesión -->
+
+    <!-- Modal del carrito -->
+    <div id="modal-carrito" class="modal">
+        <div class="modal-content">
+            <h2>Carrito de Compras</h2>
+            <div id="productos-modal"></div>
+            <p id="total-suma">Total: $0.00</p>
+            <button id="cerrar-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Modal de login -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h2>Iniciar Sesión</h2>
+            <form id="formLogin">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" required>
+                
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" required>
+                
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Sección del logo (centrada) -->
+            <div class="footer-section centered">
+                <img src="/static/logotm.png" alt="Logo de TechMart" class="footer-logo">
+                <p>TechMart - Tu tienda de tecnología favorita.</p>
+            </div>
+    
+            <!-- Sección de contacto (alineada a la izquierda) -->
+            <div class="footer-section">
+                <h3>Contáctenos</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle Real 123, Bellavista, Peru</p>
+                <p><i class="fas fa-phone"></i> Teléfono: +51 985 756 954</p>
+                <p><i class="fas fa-envelope"></i> Email: info@techmart.com</p>
+            </div>
+    
+            <!-- Sección de redes sociales (centrada) -->
+            <div class="footer-section centered">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 TechMart. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const carruselInner = document.querySelector('.carrusel-inner');
+    const images = document.querySelectorAll('.carrusel-inner img');
+    let currentIndex = 0;
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        const offset = -currentIndex * 100;
+        carruselInner.style.transform = `translateX(${offset}%)`;
+    }
+
+    setInterval(nextImage, 3000); // Cambia de imagen cada 3 segundos
+});
+    </script>
+
+    <script src="/static/cliente.js"></script>
+</body>
+</html>
+
+
+
+
+

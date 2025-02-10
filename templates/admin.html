@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Agregar FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header con logo y botón de cerrar sesión -->
+    <header>
+        <div class="logo">
+            <img src="/static/logotm.png" alt="Logo de la empresa">
+        </div>
+        <h1>Panel de Administración - Jhail</h1>
+        <button class="btn-cerrar-sesion" onclick="cerrarSesion()">
+            <i class="fas fa-sign-out-alt"></i> <!-- Icono de cerrar sesión -->
+        </button>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Formulario para agregar producto -->
+        <form id="formProducto">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="descripcion" placeholder="Descripción" required>
+            <input type="number" id="precio" placeholder="Precio" required>
+            <input type="number" id="stock" placeholder="Stock" required>
+            <button type="submit">Agregar Producto</button>
+        </form>
+
+        <!-- Tabla para mostrar productos -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="productosTabla"></tbody>
+        </table>
+
+       <div id="modalEditar">
+    <div class="modal-content">
+        <h2>Editar Producto</h2>
+        <form id="formEditarProducto">
+            <input type="hidden" id="editId">
+            <label for="editNombre">Nombre:</label>
+            <input type="text" id="editNombre" placeholder="Nombre">
+            <label for="editDescripcion">Descripción:</label>
+            <input type="text" id="editDescripcion" placeholder="Descripción">
+            <label for="editPrecio">Precio:</label>
+            <input type="text" id="editPrecio" placeholder="Precio">
+            <label for="editStock">Stock:</label>
+            <input type="number" id="editStock" placeholder="Stock">
+            <button type="submit" class="btn-guardar">Guardar</button>
+        </form>
+    </div>
+</div>
+    </main>
+
+    <!-- Footer con copyright -->
+    <footer>
+        <p>&copy;2025 TechMart. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+

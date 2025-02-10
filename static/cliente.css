@@ -1,0 +1,497 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:rgb(0, 0, 0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el logo */
+.logo-img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+/* Estilos para el buscador */
+#buscador-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#buscador {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 300px;
+}
+
+#buscador-container i {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilos para las acciones del header (carrito e iniciar sesión) */
+#acciones-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#carrito, #iniciar-sesion {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+#carrito i, #iniciar-sesion i {
+    font-size: 30px; /* Tamaño de los íconos */
+    color: #ffc107; /* Color amarillo al hacer hover ; /* Color inicial de los íconos */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+#carrito:hover i, #iniciar-sesion:hover i {
+    color:rgb(204, 126, 0); /* Color amarillo al hacer hover */
+}
+
+#carrito-counter {
+    background-color:rgb(255, 77, 77);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+main {
+    flex: 1;
+    padding: 20px;
+}
+#buscador-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+#buscador-container input {
+    padding: 8px 60px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    background-color:rgb(0, 166, 243); /* Fondo gris claro */
+}
+#buscador {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    width: 200px;
+    padding: 5px;
+}
+
+#buscador-container i {
+    color: rgb(243, 255, 9); /* Color del ícono de búsqueda */
+    margin-left: 10px;
+}
+#acciones-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+#productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos para el contenido de las tarjetas */
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px; /* Ancho de las tarjetas */
+    text-align: center;
+}
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+* Colores para las tarjetas */
+.producto.color1 {
+    background-color: #ffebee; /* Rojo claro */
+}
+
+.producto.color2 {
+    background-color: #e3f2fd; /* Azul claro */
+}
+
+.producto.color3 {
+    background-color: #f3e5f5; /* Morado claro */
+}
+
+.producto.color4 {
+    background-color: #e8f5e9; /* Verde claro */
+}
+
+
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #34495e;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.footer-section.centered {
+    text-align: center; /* Centrar el contenido de esta sección */
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f1c40f;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-section i {
+    font-size: 16px;
+    color: #f1c40f;
+}
+
+.footer-logo {
+    width: 150px; /* Hacer el logo más grande */
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centrar los íconos de redes sociales */
+    gap: 20px; /* Espacio entre íconos */
+}
+
+.social-icons a {
+    color: #ecf0f1;
+    font-size: 24px; /* Hacer los íconos más grandes */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f1c40f;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #bdc3c7;
+}
+/* Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 145, 255, 0.5); /* Fondo oscuro translúcido */
+}
+
+.modal-content {
+    background-color: rgba(255, 200, 35, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Productos dentro del modal */
+#productos-modal div {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#total-modal {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: right;
+}
+
+#finalizar-compra {
+    background-color:rgb(0, 172, 11);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#finalizar-compra:hover {
+    background-color: #0056b3;
+}
+
+.producto-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+}
+
+.btn-comprar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.btn-comprar:hover {
+    background-color: #0056b3;
+}
+
+/* Formulario de compra */
+#formCompra label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#formCompra input,
+#formCompra select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#formCompra button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#formCompra button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+#formCompra button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+
+#formCompra button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* Modal de login */
+#modal-login {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+#formLogin {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#formLogin label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#formLogin input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#formLogin button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#formLogin button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#cerrar-modal-login {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+}
+* Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+}
+
+/* Contenido del modal */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de cerrar */
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#cerrar-modal-login:hover {
+    background-color: #5a6268;yyy
+}
+.logo-img {
+    width: 150px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene la proporción */
+}
+#imagenes-promocionales {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 15px; /* Espaciado entre imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en pantallas pequeñas */
+    padding: 20px;
+}
+
+#imagenes-promocionales img {
+    width: 250px; /* Tamaño fijo para cada imagen */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Asegura que las imágenes se recorten sin deformarse */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: transform 0.3s ease; /* Efecto suave al pasar el cursor */
+}
+
+#imagenes-promocionales img:hover {
+    transform: scale(1.05); /* Pequeño efecto de zoom */
+}
+
